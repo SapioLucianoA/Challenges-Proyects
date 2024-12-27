@@ -1,0 +1,9 @@
+body{
+  width: 100%;
+}
+img{
+    width: 100vw;
+    height: 100dvh;
+    z-index: -1;
+    position: fixed;
+}

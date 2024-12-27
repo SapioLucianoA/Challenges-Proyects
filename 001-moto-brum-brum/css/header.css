@@ -1,0 +1,38 @@
+header{
+  background: linear-gradient(40deg, rgba(214, 89, 6, 0.867), rgb(218, 3, 3) 35%);
+  width: 350px;
+  height: 350px;
+  border-radius:100% ;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translateY(-55%);
+  margin-top: -30px;
+  animation: 1.5s;
+  animation-name: topToDown;
+  z-index: 1;
+}
+section{
+  position: absolute;
+  width: 20rem;
+  top: 0;
+  left: 10%;
+  transform: translateY(13rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -2rem;
+  margin-top: 2rem;
+}
+
+@keyframes topToDown {
+  0%{
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate3d(0, -55%, 0);
+    opacity: 1;
+  }
+}
