@@ -1,0 +1,13 @@
+h1{
+  text-align: center;
+  color: antiquewhite;
+}
+body {
+  background-color: #111;
+}
+canvas{
+  display: block;
+  margin: 0 auto;
+  background-image: url('../assets/bkg.png');
+  border: white 2px solid;
+}
