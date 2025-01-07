@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type game</title>
+  <link rel="stylesheet" href="./css/css.css">
+</head>
+
+<body>
+  <header>
+    <h1>Mokey-Type Clon</h1>
+    <h4>Powered by <a href="https://random-word-api.herokuapp.com/" target="_blank" rel="noopener">Random Word API</a></h4>
+  </header>
+  <main>
+    <section id="game">
+      <p id="time"></p>
+      <p id="text"></p>
+      <input type="text" name="input-text" id="input" autofocus placeholder="Start typing...">
+    </section>
+    <section id="results">
+
+      <h2 id="res">results:</h2>
+      <div>
+      <h3>Accuarancy:</h3>
+      <p id="acc">0%</p>
+    </div>
+    <div>
+      <h3>wpm:</h3>
+      <p id="wpm">0</p>
+    </div>
+    </section>
+  </main>
+</body>
+<script type="module" src="./js/type.js"></script>
+<script type="module" src="./js/apiService.js"></script>
+
+</html>

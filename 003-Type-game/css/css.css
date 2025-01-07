@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --backgound: #2e31369b;
+  --green: #02d802;
+  --red: #ff0000;
+  --black: #222;
+  --grey: #999;
+  --yelow: #f1c40f;
+}
+h4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--grey);
+}
+h4 > a {
+  color: var(--green);
+}
+body {
+  font-family: Menlo, monospace;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+#time {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 10%;
+  align-self: flex-start;
+  color: var(--yelow);
+}
+#input {
+  background-color: transparent;
+  border: transparent;
+  pointer-events: none;
+  z-index: -999;
+  position: absolute;
+  top: 100;
+  left: 100;
+  color: antiquewhite;
+  margin: 1rem 0 0 1rem;
+  opacity: 0;
+}
+
+#game {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+#text {
+  color: var(--grey);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  width: 80%;
+}
+x-letter {
+  position: relative;
+  &.correct {
+    color: var(--green);
+  }
+  &.incorrect {
+    color: var(--red);
+  }
+}
+x-letter.active::before {
+  content: "|";
+  position: absolute;
+  left: -55%;
+  color: var(--yelow);
+  animation: ease-in-out 0.75s blink infinite;
+}
+
+x-letter.active.lastLetter::before {
+  left: 55%;
+}
+x-word {
+  margin: 0 0.1rem 0 0;
+  display: inline-block;
+}
+x-word.word-incorrect {
+  border-bottom: 2px solid var(--red);
+}
+#results {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0 0 0;
+  color: var(--grey);
+  flex-direction: row;
+  gap: 3rem;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#acc{
+  font-size: 1.5rem!important;
+}
+#wpm{
+  font-size: 1.5rem!important;
+}
+
+@keyframes blink {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
