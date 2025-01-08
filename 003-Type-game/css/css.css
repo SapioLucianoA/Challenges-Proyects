@@ -113,11 +113,74 @@ div {
   flex-direction: column;
   gap: 1rem;
 }
-#acc{
-  font-size: 1.5rem!important;
+#acc {
+  font-size: 1.5rem !important;
+  color: var(--yelow);
 }
-#wpm{
-  font-size: 1.5rem!important;
+#wpm {
+  font-size: 1.5rem !important;
+  color: var(--yelow);
+}
+#buttton{
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  &:hover{
+    background: rgba(89, 86, 86, 0.43);
+    transform: scale(1.1, 1.1);
+  }
+}
+#buttton > img{
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  &:hover {
+
+    animation: getRotated ease-in-out 0.5s infinite;
+  }
+}
+
+@keyframes getRotated {
+  0%,
+  10% {
+    transform:  rotate(30deg);
+  }
+  10%,
+  20% {
+    transform:  rotate(60deg);
+  }
+  20%,
+  30% {
+    transform:  rotate(80deg);
+  }
+  30%,
+  40% {
+    transform: rotate(120deg);
+  }
+  40%,
+  50% {
+    transform: rotate(160deg);
+  }
+  50%,
+  60% {
+    transform: rotate(180deg);
+  }
+  60%,
+  70% {
+    transform:  rotate(210deg);
+  }
+  70%,
+  80% {
+    transform:  rotate(250deg);
+  }
+  80%,
+  90% {
+    transform:  rotate(300deg);
+  }
+  90%,
+  100% {
+    transform:  rotate(360deg);
+  }
 }
 
 @keyframes blink {
